@@ -53,181 +53,274 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <!-- NAVBAR -->
-<nav class="navbar" aria-label="Primary navigation">
+<header class="navbar" id="navbar">
   <div class="nav-container">
-    <a href="#home" class="logo">
-      CyberPhysical<span>Layer</span>
+    <a href="#home" class="logo" aria-label="CyberPhysicalLayer Home">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span>CyberPhysical<span class="logo-light">Layer</span></span>
     </a>
 
-    <div id="navMenu">
+    <nav id="navMenu" aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#platform">Technology</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </div>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
 
     <button type="button" class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
       <span></span><span></span><span></span>
     </button>
   </div>
-</nav>
+</header>
+
+<main id="main-content">
 
 <!-- HERO -->
 <section class="hero-section" id="home">
-  <div class="hero-glow"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-container">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-container">
     <div class="hero-left">
-      <div class="hero-badge">TRL 4 Prototype &middot; Paid 4-Site Pilot Scheduled</div>
-      <h1>Understand <span>what happened</span><br>across your <span>industrial site</span>.</h1>
-      <div class="hero-divider"></div>
+      <div class="hero-badge">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>TRL 4 Prototype &middot; Paid 4-Site Pilot Scheduled</span>
+      </div>
+      <h1>Understand <span>what happened</span> across your <span>industrial site</span>.</h1>
       <p class="hero-text">
         Cyber-Physical Security Layer Ltd (CPSL) is developing an edge gateway for small UK warehouses, depots, multi-bay workshops and supplier factories. It links events from existing cameras, doors, connected machines and the site network into one timeline. The site manager gets a plain-English account, a confidence statement and practical first actions.
       </p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn-blue">Request a Demo &rarr;</a>
-        <a href="#platform" class="btn-outline-blue">Explore Technology</a>
+        <a href="#contact" class="btn btn-primary">
+          <span>Request a Demo</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8h9m0 0L9 4.5M12.5 8 9 11.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#platform" class="btn btn-secondary">Explore Technology</a>
+      </div>
+      <div class="hero-meta-bar" aria-label="Product scope summary">
+        <span>London HQ</span>
+        <span class="sep" aria-hidden="true">&middot;</span>
+        <span>UK Sites (10&ndash;249 Staff)</span>
+        <span class="sep" aria-hidden="true">&middot;</span>
+        <span>Camera Footage Stays On Site</span>
       </div>
     </div>
 
     <div class="hero-right">
-      <div class="hero-card">
-        <div class="hero-card-title">// Paid pilot targets</div>
+      <aside class="hero-card" aria-label="Paid pilot targets">
+        <div class="hero-card-header">
+          <div>
+            <div class="hero-card-kicker">// Paid pilot targets</div>
+            <h2 class="hero-card-heading">Month 7 TRL 7 Gate Criteria</h2>
+          </div>
+          <span class="status-chip">TRL 4 Today</span>
+        </div>
+
         <p class="hero-card-sub">
-          Currently at TRL 4 (18-screen interactive prototype). Scheduled 12-week build, paid 4-site pilot in Months 4&ndash;6, and a Month 7 decision gate for TRL 7. Four director-signed letters of intent at &pound;199/site/month evidence commercial interest ahead of the pilot.
+          18-screen interactive prototype complete. Scheduled 12-week build, paid 4-site pilot in Months 4&ndash;6 (backed by 4 director-signed letters of intent at &pound;199/site/month), and a Month 7 decision gate on whether criteria for TRL 7 are met.
         </p>
+
         <div class="hero-stats-row">
           <div class="hero-stat-mini">
+            <span class="stat-tag">Target</span>
             <span class="val">&ge;90%</span>
-            <span class="lbl">Target: Source coverage</span>
+            <span class="lbl">Source coverage</span>
           </div>
           <div class="hero-stat-mini">
+            <span class="stat-tag">Target</span>
             <span class="val">&ge;80%</span>
-            <span class="lbl">Target: Chain detection</span>
+            <span class="lbl">Chain detection</span>
           </div>
           <div class="hero-stat-mini amber">
+            <span class="stat-tag">Target</span>
             <span class="val">&le;3 / wk</span>
-            <span class="lbl">Target: Max noise / site</span>
+            <span class="lbl">Max noise per site</span>
           </div>
           <div class="hero-stat-mini">
+            <span class="stat-tag">Target</span>
             <span class="val">&ge;80%</span>
-            <span class="lbl">Target: Useful &amp; clear</span>
+            <span class="lbl">Rated useful &amp; clear</span>
           </div>
           <div class="hero-stat-mini">
+            <span class="stat-tag">Target</span>
             <span class="val">&lt;5 min</span>
-            <span class="lbl">Target: Timeline rebuild</span>
+            <span class="lbl">Timeline rebuild</span>
           </div>
           <div class="hero-stat-mini amber">
+            <span class="stat-tag">Target</span>
             <span class="val">&ge;3 / 4</span>
-            <span class="lbl">Target: Pilot conversion</span>
+            <span class="lbl">Pilot conversion</span>
           </div>
         </div>
+
         <p class="hero-card-footnote">
-          Months are relative to start of operations. Targets above are future Month 4&ndash;6 pilot test criteria, not measured live performance.
+          Months are relative to start of operations. Criteria above are future Month 4&ndash;6 pilot tests, not live measured performance.
         </p>
-      </div>
+      </aside>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="about-container">
-    <div class="about-left">
+<section class="section about-section" id="about">
+  <div class="container about-container">
+    <div class="about-left reveal">
       <div class="section-label">About CPSL</div>
-      <h2 class="section-title">One Incident Timeline From<br>Four Separate Systems</h2>
+      <h2 class="section-title">One Incident Timeline From Four Separate Systems</h2>
       <div class="section-divider"></div>
       <p>
-        At small UK industrial sites with 10 to 249 staff, a door controller, camera, machine and router can record parts of the same incident on different clocks and vocabularies, with no link between them. When stock goes missing, a door is forced or an unknown device joins the network, reconstructing what happened by hand takes hours and is often abandoned.
+        At small UK industrial sites with 10 to 249 staff, a door controller, camera, machine and router can record parts of the same incident on different clocks and vocabularies, with no link between them. When equipment goes missing, a door is forced or an unknown device joins the network, reconstructing what happened by hand takes hours and is often abandoned.
       </p>
       <p>
         CPSL is designed to show which events belong together across physical and digital systems, identify which sources were missing, and tell the site manager what to check first in plain English with a stated confidence. Camera footage stays on the site recorder, and nothing the business already owns needs replacing.
       </p>
       <p>
-        Each month, the service generates a <strong class="inline-emphasis">dated monthly evidence pack</strong> recording incidents, actions taken and source coverage—ready to share with a customer, insurer or auditor. Headquartered in London, United Kingdom.
+        Each month, the service exports a <strong class="inline-emphasis">dated monthly evidence pack</strong> recording incidents, actions taken and source coverage—ready to share with a customer, insurer or auditor. Headquartered in London, United Kingdom.
       </p>
-      <div class="about-features">
-        <div class="feature-tag">10&ndash;249 Staff Industrial Sites</div>
-        <div class="feature-tag">Footage Stays On Site</div>
-        <div class="feature-tag">Single-Clock Timeline</div>
-        <div class="feature-tag">Brownfield Resilient</div>
-        <div class="feature-tag">Monthly Evidence Pack</div>
-        <div class="feature-tag">UK-Region Data Hosting</div>
-      </div>
+
+      <ul class="about-features" aria-label="Key product design characteristics">
+        <li class="feature-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 13V4.5L8 2l6 2.5V13M5 13v-3.5h6V13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>10&ndash;249 Staff Industrial Sites</span>
+        </li>
+        <li class="feature-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.5 3 4.8v3.6c0 3 2.1 5.1 5 5.9 2.9-.8 5-2.9 5-5.9V4.8L8 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="m6 8.2 1.4 1.4L10.3 6.7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Footage Stays On Site</span>
+        </li>
+        <li class="feature-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M8 5v3l2 1.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <span>Single-Clock Timeline</span>
+        </li>
+        <li class="feature-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 8h5M8 5.5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <span>Brownfield Resilient</span>
+        </li>
+        <li class="feature-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 2.5h5.5L12.5 5.5v8H4v-11Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M6 8.5h4M6 11h2.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <span>Monthly Evidence Pack</span>
+        </li>
+        <li class="feature-item">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 10.5A3.2 3.2 0 0 1 5.6 5a3.8 3.8 0 0 1 7.2 1.1A2.7 2.7 0 0 1 12.2 11H4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>UK-Region Data Hosting</span>
+        </li>
+      </ul>
     </div>
 
-    <div class="founder-box">
-      <div class="founder-box-title">Co-Founders</div>
-      <div class="founder-box-div"></div>
-      <div class="founder-box-section">
-        <p class="founder-heading"><strong>Muhammad Ashhar</strong> &mdash; Co-founder &amp; Chief Executive Officer</p>
-        <p>Holds an MSc in Cyber Security and Forensics from the University of Westminster. Leads product definition, customer relationships, commercial partnerships, finance and governance.</p>
+    <div class="founder-box reveal" data-delay="1">
+      <div class="founder-box-header">
+        <span class="founder-box-title">Founding Leadership</span>
+        <span class="founder-uni-tag">MSc Cyber Security &amp; Forensics &middot; Westminster</span>
       </div>
-      <div class="founder-box-section">
-        <p class="founder-heading"><strong>Muhammad Asil Shahzad</strong> &mdash; Co-founder &amp; Chief Technology Officer</p>
-        <p>Holds an MSc in Cyber Security and Forensics from the University of Westminster. Leads architecture, the edge gateway, platform engineering, security, data protection and technical validation.</p>
-      </div>
-      <a href="#contact" class="linkedin-btn">Contact the Founders &rarr;</a>
+
+      <article class="founder-card">
+        <div class="founder-top">
+          <div class="founder-initials" aria-hidden="true">MA</div>
+          <div>
+            <h3>Muhammad Ashhar</h3>
+            <div class="founder-role">Co-founder and Chief Executive Officer</div>
+          </div>
+        </div>
+        <p>
+          Holds an MSc in Cyber Security and Forensics from the University of Westminster. Leads product definition, customer relationships, commercial partnerships, finance and governance.
+        </p>
+      </article>
+
+      <article class="founder-card">
+        <div class="founder-top">
+          <div class="founder-initials" aria-hidden="true">MS</div>
+          <div>
+            <h3>Muhammad Asil Shahzad</h3>
+            <div class="founder-role">Co-founder and Chief Technology Officer</div>
+          </div>
+        </div>
+        <p>
+          Holds an MSc in Cyber Security and Forensics from the University of Westminster. Leads architecture, the edge gateway, platform engineering, security, data protection and technical validation.
+        </p>
+      </article>
+
+      <a href="#contact" class="btn btn-primary btn-sm">
+        <span>Contact the Founders</span>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8h9m0 0L9 4.5M12.5 8 9 11.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="process-section" id="how-it-works">
-  <div class="process-container">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">Five-Stage Incident Intelligence Pipeline</h2>
-    <div class="section-divider"></div>
-    <p class="process-sub">
-      CPSL processes events across five layers—aligning existing cameras, doors, machines and network signals into one plain-English incident account, a confidence statement and practical first actions.
-    </p>
+<!-- HOW IT WORKS (5-STAGE ARCHITECTURAL PIPELINE) -->
+<section class="section process-section" id="how-it-works">
+  <div class="container">
+    <div class="section-header-center reveal">
+      <div class="section-label section-label-light">How It Works</div>
+      <h2 class="section-title section-title-dark">Five-Stage Incident Intelligence Pipeline</h2>
+      <p class="section-sub section-sub-dark">
+        Every physical and digital event moves through five connected layers—turning siloed clocks and disconnected logs into one plain-English account, a confidence statement and practical first actions.
+      </p>
+    </div>
 
-    <div class="process-grid">
-      <div class="process-card">
-        <img src="/images/cyber1.png" class="process-card-img" alt="Stage 1: Collection across camera metadata, door access, machine logs and network records">
-        <div class="process-card-body">
-          <div class="step-badge">STAGE 01</div>
-          <h3>1 &mdash; Collection</h3>
-          <p>The gateway reads camera metadata, door and badge events, machine and controller logs, and network flow records and syslog. Camera footage stays on site.</p>
-        </div>
+    <div class="pipeline-layout">
+      <div class="pipeline-steps" role="tablist" aria-label="Five-stage CPSL processing pipeline">
+        <button type="button" class="pipeline-step active" role="tab" aria-selected="true" aria-controls="stage-viewer" data-stage="0">
+          <span class="step-num">01</span>
+          <div class="step-copy">
+            <h3>1 &mdash; Collection</h3>
+            <p>The gateway reads camera metadata, door and badge events, machine and controller logs, and network flow records and syslog. Camera footage stays on site.</p>
+          </div>
+        </button>
+
+        <button type="button" class="pipeline-step" role="tab" aria-selected="false" aria-controls="stage-viewer" data-stage="1">
+          <span class="step-num">02</span>
+          <div class="step-copy">
+            <h3>2 &mdash; Normalisation</h3>
+            <p>Events are put into one format and aligned to one reference clock. Each event is labelled by place, actor and domain.</p>
+          </div>
+        </button>
+
+        <button type="button" class="pipeline-step" role="tab" aria-selected="false" aria-controls="stage-viewer" data-stage="2">
+          <span class="step-num">03</span>
+          <div class="step-copy">
+            <h3>3 &mdash; Suspicion chains</h3>
+            <p>Events are linked by time, place and order so that a related sequence can be assessed as one incident.</p>
+          </div>
+        </button>
+
+        <button type="button" class="pipeline-step" role="tab" aria-selected="false" aria-controls="stage-viewer" data-stage="3">
+          <span class="step-num">04</span>
+          <div class="step-copy">
+            <h3>4 &mdash; Reconstruction</h3>
+            <p>If a step is missing, the system identifies the most probable sequence, labels the inferred step and states its confidence.</p>
+          </div>
+        </button>
+
+        <button type="button" class="pipeline-step" role="tab" aria-selected="false" aria-controls="stage-viewer" data-stage="4">
+          <span class="step-num">05</span>
+          <div class="step-copy">
+            <h3>5 &mdash; Narrative &amp; guidance</h3>
+            <p>The manager receives a plain-English account, the contributing and missing sources, and the first physical and digital actions to take.</p>
+          </div>
+        </button>
       </div>
 
-      <div class="process-card">
-        <img src="/images/stage2-normalisation.png" class="process-card-img" alt="Stage 2: Normalisation to one format and reference clock">
-        <div class="process-card-body">
-          <div class="step-badge">STAGE 02</div>
-          <h3>2 &mdash; Normalisation</h3>
-          <p>Events are put into one format and aligned to one reference clock. Each event is labelled by place, actor and domain.</p>
+      <div class="pipeline-viewer" id="stage-viewer" role="tabpanel" aria-live="polite">
+        <div class="viewer-bar">
+          <span class="viewer-badge" id="viewerBadge">STAGE 01 &middot; COLLECTION</span>
+          <div class="viewer-tabs" aria-label="Quick stage switch">
+            <button type="button" class="viewer-dot active" data-stage="0" aria-label="View Stage 1 Collection">01</button>
+            <button type="button" class="viewer-dot" data-stage="1" aria-label="View Stage 2 Normalisation">02</button>
+            <button type="button" class="viewer-dot" data-stage="2" aria-label="View Stage 3 Suspicion chains">03</button>
+            <button type="button" class="viewer-dot" data-stage="3" aria-label="View Stage 4 Reconstruction">04</button>
+            <button type="button" class="viewer-dot" data-stage="4" aria-label="View Stage 5 Narrative and guidance">05</button>
+          </div>
         </div>
-      </div>
-
-      <div class="process-card">
-        <img src="/images/stage3-suspicion-chains.png" class="process-card-img" alt="Stage 3: Suspicion chains linking events by time, place and order">
-        <div class="process-card-body">
-          <div class="step-badge">STAGE 03</div>
-          <h3>3 &mdash; Suspicion chains</h3>
-          <p>Events are linked by time, place and order so that a related sequence can be assessed as one incident.</p>
+        <div class="viewer-frame">
+          <img id="viewerImg" src="/images/cyber1.png" width="1536" height="1024" alt="Stage 1: Collection across camera metadata, door access, machine logs and network records">
         </div>
-      </div>
-
-      <div class="process-card">
-        <img src="/images/stage4-reconstruction.png" class="process-card-img" alt="Stage 4: Reconstruction of missing steps with stated confidence">
-        <div class="process-card-body">
-          <div class="step-badge">STAGE 04</div>
-          <h3>4 &mdash; Reconstruction</h3>
-          <p>If a step is missing, the system identifies the most probable sequence, labels the inferred step and states its confidence.</p>
-        </div>
-      </div>
-
-      <div class="process-card">
-        <img src="/images/cyber3.png" class="process-card-img" alt="Stage 5: Plain-English narrative and mixed-incident guidance">
-        <div class="process-card-body">
-          <div class="step-badge">STAGE 05</div>
-          <h3>5 &mdash; Narrative &amp; guidance</h3>
-          <p>The manager receives a plain-English account, the contributing and missing sources, and the first physical and digital actions to take.</p>
+        <div class="viewer-caption">
+          <strong id="viewerTitle">1 &mdash; Collection</strong>
+          <span id="viewerDesc">Reads standard interfaces from existing cameras, doors, connected machines and network equipment without sending video off site.</span>
         </div>
       </div>
     </div>
@@ -235,142 +328,186 @@
 </section>
 
 <!-- CORE TECHNOLOGY -->
-<section class="platform-section" id="platform">
-  <div class="platform-container">
-    <div class="section-label">Core Technology</div>
-    <h2 class="section-title">Five Core Elements &amp; Edge Gateway</h2>
-    <div class="section-divider"></div>
-    <p class="platform-sub">
-      Purpose-built for small industrial sites with legacy equipment. The initial build is planned around twenty cross-domain rules; statistical baselines and calibrated confidence are later development work, and learned reconstruction models trained on labelled data follow later.
-    </p>
+<section class="section platform-section" id="platform">
+  <div class="container">
+    <div class="section-header-center reveal">
+      <div class="section-label">Core Technology</div>
+      <h2 class="section-title">Five Core Elements &amp; Edge Gateway</h2>
+      <p class="section-sub">
+        Designed for industrial sites with legacy equipment. Below is how the initial 12-week build relates to later roadmap work.
+      </p>
+    </div>
+
+    <div class="roadmap-strip reveal" aria-label="Initial build versus roadmap">
+      <div class="roadmap-phase">
+        <span class="phase-tag">Initial Build (Weeks 1&ndash;12)</span>
+        <p>Twenty deterministic cross-domain rules reviewed with site managers, single-clock normalisation, gap marking and plain-English accounts.</p>
+      </div>
+      <div class="roadmap-phase">
+        <span class="phase-tag amber">Later Work (Months 8&ndash;18)</span>
+        <p>Site-learned statistical baselines and calibrated reconstruction confidence built on observed pilot and commercial site data.</p>
+      </div>
+      <div class="roadmap-phase">
+        <span class="phase-tag amber">Later Work (Months 19&ndash;30)</span>
+        <p>Learned reconstruction models trained on the labelled small-site incident corpus where telemetry evidence is missing.</p>
+      </div>
+    </div>
 
     <div class="platform-grid">
-      <div class="platform-card" id="card-a">
-        <img src="/images/tech-a-brownfield.png" class="platform-card-img" alt="Element A: Intelligence for industrial sites with legacy equipment">
-        <div class="platform-card-body">
-          <div class="element-badge">Element A</div>
-          <h3>Intelligence for Legacy Industrial Sites</h3>
-          <p class="short-text">Purpose-built cyber-physical intelligence for small warehouses, depots, workshops and supplier factories using existing equipment.</p>
-          <div class="more-text" id="card-a-details">
-            <p>Unlike enterprise tools requiring mature asset discovery, OT transformation or continuous telemetry, CPSL works from the signals your cameras, door controllers, machines and routers already emit—even when a source is offline.</p>
-            <p class="roadmap-note"><strong>Initial build vs roadmap:</strong> The first version is planned around twenty deterministic cross-domain rules reviewed with site managers. Site-specific statistical baselines and calibrated confidence follow in later development (Months 8&ndash;18).</p>
-          </div>
-          <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-a-details" data-card="card-a">Learn More</button>
+      <article class="platform-card reveal" id="card-a" data-delay="0">
+        <div class="card-head">
+          <span class="element-badge">Element A</span>
+          <span class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 16V6.5L10 3l7 3.5V16M7 16v-4.5h6V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
         </div>
-      </div>
+        <h3>Intelligence for Legacy Industrial Sites</h3>
+        <p class="short-text">Purpose-built cyber-physical intelligence for small warehouses, depots, workshops and supplier factories using existing equipment.</p>
+        <div class="more-text" id="card-a-details">
+          <div class="more-text-inner">
+            <p>Unlike enterprise tools requiring mature asset discovery, OT transformation or continuous telemetry, CPSL works from the signals your cameras, door controllers, machines and routers already emit—even when a source is offline.</p>
+            <p class="roadmap-note"><strong>Initial build vs roadmap:</strong> The first version is planned around twenty deterministic cross-domain rules reviewed with site managers. Statistical baselines and calibrated confidence follow later (Months 8&ndash;18).</p>
+          </div>
+        </div>
+        <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-a-details" data-card="card-a">Learn More</button>
+      </article>
 
-      <div class="platform-card" id="card-b">
-        <img src="/images/tech-b-chains.png" class="platform-card-img" alt="Element B: Cross-domain suspicion chains">
-        <div class="platform-card-body">
-          <div class="element-badge">Element B</div>
-          <h3>Cross-Domain Suspicion Chains</h3>
-          <p class="short-text">Links door access events, camera metadata, machine stoppages or logins and network activity into one ordered sequence.</p>
-          <div class="more-text" id="card-b-details">
+      <article class="platform-card reveal" id="card-b" data-delay="1">
+        <div class="card-head">
+          <span class="element-badge">Element B</span>
+          <span class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="4.5" cy="10" r="2.2" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="5" r="2.2" stroke="currentColor" stroke-width="1.5"/><circle cx="15.5" cy="12" r="2.2" stroke="currentColor" stroke-width="1.5"/><path d="M6.2 8.4 8.3 6.5M11.6 6.7l2.4 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3>Cross-Domain Suspicion Chains</h3>
+        <p class="short-text">Links door access events, camera metadata, machine stoppages or logins and network activity into one ordered sequence.</p>
+        <div class="more-text" id="card-b-details">
+          <div class="more-text-inner">
             <p>Single-domain systems raise isolated alerts that look harmless on their own. CPSL links related events by time, place and order across physical and digital sources so a connected sequence is evaluated as one incident chain.</p>
             <p class="roadmap-note"><strong>Initial build vs roadmap:</strong> Starts with twenty cross-domain rules in the 12-week build, expanding with statistical baselines and broader rule coverage on the later roadmap.</p>
           </div>
-          <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-b-details" data-card="card-b">Learn More</button>
         </div>
-      </div>
+        <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-b-details" data-card="card-b">Learn More</button>
+      </article>
 
-      <div class="platform-card" id="card-c">
-        <img src="/images/tech-c-reconstruction.png" class="platform-card-img" alt="Element C: Reconstruction from partial evidence">
-        <div class="platform-card-body">
-          <div class="element-badge">Element C</div>
-          <h3>Reconstruction from Partial Evidence</h3>
-          <p class="short-text">Infers the most probable sequence when a step is missing, labels what was inferred and states reduced confidence.</p>
-          <div class="more-text" id="card-c-details">
+      <article class="platform-card reveal" id="card-c" data-delay="2">
+        <div class="card-head">
+          <span class="element-badge">Element C</span>
+          <span class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10h3l2.2-4.5L11.5 14l2.2-4H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+        <h3>Reconstruction from Partial Evidence</h3>
+        <p class="short-text">Infers the most probable sequence when a step is missing, labels what was inferred and states reduced confidence.</p>
+        <div class="more-text" id="card-c-details">
+          <div class="more-text-inner">
             <p>When brownfield sensors drop offline, conventional tools fail silently. CPSL separates recorded observations from inferred steps so managers know both what was logged and where telemetry was missing.</p>
             <div class="worked-example">
               <div class="worked-label">Worked example &mdash; Illustrative workshop scenario (not a live customer incident)</div>
-              <ul>
-                <li><strong>Observed (02:14):</strong> The rear door opens without a badge event.</li>
-                <li><strong>Observed (02:16):</strong> An unknown device joins the network.</li>
-                <li><strong>Observed (02:19):</strong> The diagnostic server records a port scan.</li>
-                <li><strong>Observed (02:21):</strong> A controller records an unusual after-hours login.</li>
-                <li><strong>Missing source &amp; Inference:</strong> The rear camera was offline for maintenance, so the system cannot identify who entered. CPSL labels the missing physical entry step as <em>inferred</em> and reports the chain at reduced confidence.</li>
+              <ul class="worked-timeline">
+                <li><span class="ts">02:14</span><span class="kind obs">Observed</span><span>The rear door opens without a badge event.</span></li>
+                <li><span class="ts">02:16</span><span class="kind obs">Observed</span><span>An unknown device joins the network.</span></li>
+                <li><span class="ts">02:19</span><span class="kind obs">Observed</span><span>The diagnostic server records a port scan.</span></li>
+                <li><span class="ts">02:21</span><span class="kind obs">Observed</span><span>A controller records an unusual after-hours login.</span></li>
+                <li><span class="ts">Gap</span><span class="kind inf">Inferred</span><span>The rear camera was offline for maintenance, so the system cannot identify who entered. CPSL labels the missing physical entry step as <em>inferred</em> and reports the chain at reduced confidence.</span></li>
               </ul>
             </div>
-            <p class="roadmap-note"><strong>Roadmap:</strong> Calibrated reconstruction confidence is planned for Months 8&ndash;18, with learned reconstruction models trained on labelled data following in Months 19&ndash;30.</p>
+            <p class="roadmap-note"><strong>Roadmap:</strong> Calibrated confidence is planned for Months 8&ndash;18, with learned reconstruction models trained on labelled data following in Months 19&ndash;30.</p>
           </div>
-          <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-c-details" data-card="card-c">Learn More</button>
         </div>
-      </div>
+        <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-c-details" data-card="card-c">Learn More</button>
+      </article>
 
-      <div class="platform-card" id="card-d">
-        <img src="/images/tech-d-narrative.png" class="platform-card-img" alt="Element D: Plain-English operational narratives">
-        <div class="platform-card-body">
-          <div class="element-badge">Element D</div>
-          <h3>Plain-English Operational Narratives</h3>
-          <p class="short-text">Turns linked cross-domain events into a concise account naming what happened, where, when and what is unusual.</p>
-          <div class="more-text" id="card-d-details">
+      <article class="platform-card reveal" id="card-d" data-delay="0">
+        <div class="card-head">
+          <span class="element-badge">Element D</span>
+          <span class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4.5 3.5h8l3 3v10h-11v-13Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M7 9.5h6M7 12.5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3>Plain-English Operational Narratives</h3>
+        <p class="short-text">Turns linked cross-domain events into a concise account naming what happened, where, when and what is unusual.</p>
+        <div class="more-text" id="card-d-details">
+          <div class="more-text-inner">
             <p>Designed for site managers, owners and depot leads rather than security analysts. Every account lists which sources contributed, which were offline, and the confidence statement—avoiding dense charts and dashboard fatigue.</p>
             <p>Incidents, manager actions and source coverage feed automatically into a dated monthly evidence pack for customers, insurers or auditors.</p>
           </div>
-          <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-d-details" data-card="card-d">Learn More</button>
         </div>
-      </div>
+        <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-d-details" data-card="card-d">Learn More</button>
+      </article>
 
-      <div class="platform-card" id="card-e">
-        <img src="/images/tech-e-guidance.png" class="platform-card-img" alt="Element E: Response guidance for mixed physical and digital incidents">
-        <div class="platform-card-body">
-          <div class="element-badge">Element E</div>
-          <h3>Mixed Physical &amp; Digital Response Guidance</h3>
-          <p class="short-text">Recommends coordinated first physical and digital actions tied directly to the events in the chain.</p>
-          <div class="more-text" id="card-e-details">
+      <article class="platform-card reveal" id="card-e" data-delay="1">
+        <div class="card-head">
+          <span class="element-badge">Element E</span>
+          <span class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6.5 6.5h9M6.5 10h9M6.5 13.5h9M3.5 6.5h.5M3.5 10h.5M3.5 13.5h.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3>Mixed Physical &amp; Digital Response Guidance</h3>
+        <p class="short-text">Recommends coordinated first physical and digital actions tied directly to the events in the chain.</p>
+        <div class="more-text" id="card-e-details">
+          <div class="more-text-inner">
             <p>Instead of separate IT playbooks or physical alarm escalations, CPSL gives the site manager clear first actions across both domains in order—and timestamps completed steps into the incident record.</p>
-            <p>In the illustrative workshop scenario above, the first actions are to preserve controller logs, isolate the unknown device by its network address, check the rear door for damage and restore the offline camera.</p>
+            <p>In the illustrative workshop scenario, the first actions are to preserve controller logs, isolate the unknown device by its network address, check the rear door for damage and restore the offline camera.</p>
           </div>
-          <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-e-details" data-card="card-e">Learn More</button>
         </div>
-      </div>
+        <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-e-details" data-card="card-e">Learn More</button>
+      </article>
 
-      <div class="platform-card" id="card-f">
-        <img src="/images/tech-f-architecture.png" class="platform-card-img" alt="Architecture: On-site edge gateway and existing site equipment">
-        <div class="platform-card-body">
-          <div class="element-badge">Architecture</div>
-          <h3>Edge Gateway &amp; Existing Equipment</h3>
-          <p class="short-text">A commodity edge gateway connects via standard interfaces beside existing systems—raw footage stays on site.</p>
-          <div class="more-text" id="card-f-details">
+      <article class="platform-card reveal" id="card-f" data-delay="2">
+        <div class="card-head">
+          <span class="element-badge">Architecture</span>
+          <span class="card-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="5" rx="1.2" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="11" width="14" height="5" rx="1.2" stroke="currentColor" stroke-width="1.5"/><circle cx="6.2" cy="6.5" r="0.9" fill="currentColor"/><circle cx="6.2" cy="13.5" r="0.9" fill="currentColor"/></svg>
+          </span>
+        </div>
+        <h3>Edge Gateway &amp; Existing Equipment</h3>
+        <p class="short-text">A commodity edge gateway connects via standard interfaces beside existing systems—raw footage stays on site.</p>
+        <div class="more-text" id="card-f-details">
+          <div class="more-text-inner">
             <p>The gateway reads camera metadata, tokenised door/badge events, machine fault/login logs and network syslog/flow records without replacing cameras or controllers. It sits beside site systems, never in front of them, so normal operations continue unaffected if the gateway goes offline.</p>
             <p>A local store-and-forward buffer bridges broadband interruptions and backfills on reconnection. Event metadata, narratives and evidence packs are hosted in a UK cloud region with encryption in transit and at rest.</p>
           </div>
-          <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-f-details" data-card="card-f">Learn More</button>
         </div>
-      </div>
+        <button type="button" class="learn-btn" aria-expanded="false" aria-controls="card-f-details" data-card="card-f">Learn More</button>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- MARKET STRIP -->
 <section class="market-strip" aria-label="Market size and projections">
-  <div class="stats-grid">
-    <div class="stat-item">
-      <span class="stat-num">11,497 sites</span>
-      <div class="stat-desc">UK addressable market estimate &mdash; &pound;43.0 million annually (10&ndash;249 staff warehouses &amp; MOT workshops)</div>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">7,013 sites</span>
-      <div class="stat-desc">UK serviceable market estimate &mdash; &pound;26.2 million annually (sites with perimeter CCTV in place)</div>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">1,971 sites</span>
-      <div class="stat-desc">Serviceable market across four operating regions &mdash; &pound;7.4 million annually</div>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">158 sites</span>
-      <div class="stat-desc">Month 36 base-case projection &mdash; active sites (~8% of the regional serviceable market)</div>
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="stat-item">
+        <div class="stat-num">11,497 <span>sites</span></div>
+        <div class="stat-desc">UK addressable market estimate &mdash; &pound;43.0 million annually (10&ndash;249 staff warehouses &amp; MOT workshops)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">7,013 <span>sites</span></div>
+        <div class="stat-desc">UK serviceable market estimate &mdash; &pound;26.2 million annually (sites with perimeter CCTV in place)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1,971 <span>sites</span></div>
+        <div class="stat-desc">Serviceable market across four operating regions &mdash; &pound;7.4 million annually</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">158 <span>sites</span></div>
+        <div class="stat-desc">Month 36 base-case projection &mdash; active sites (~8% of the regional serviceable market)</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- UK REGIONAL FOCUS -->
-<section class="map-section" id="market">
-  <div class="map-container">
-    <img src="/images/uk-regional-map.png" alt="UK map highlighting London headquarters, West Midlands and South Wales first operating cluster, and North West and East Midlands projected Year-3 expansion">
-    <div class="map-right">
+<section class="section map-section" id="market">
+  <div class="container map-container">
+    <div class="map-frame reveal">
+      <img src="/images/uk-regional-map.png" width="886" height="1320" alt="UK map highlighting London headquarters, West Midlands and South Wales first operating cluster, and North West and East Midlands projected Year-3 expansion">
+    </div>
+    <div class="map-right reveal" data-delay="1">
       <div class="section-label">UK Regional Focus</div>
-      <h2 class="section-title">West Midlands &amp; South Wales<br>First Operating Cluster</h2>
+      <h2 class="section-title">West Midlands &amp; South Wales First Operating Cluster</h2>
       <div class="section-divider"></div>
       <p>
         Headquartered in <strong class="inline-emphasis">London, United Kingdom</strong>, CPSL begins field deployment in the <strong class="inline-emphasis">West Midlands and South Wales</strong>, where warehousing, depots, workshops and light manufacturing are concentrated and where four director-signed letters of intent support the planned Month 4&ndash;6 paid pilot.
@@ -378,6 +515,20 @@
       <p>
         From Year 3, the business plan projects regional expansion along the M1 corridor into the <strong class="inline-emphasis">North West and East Midlands</strong>, supported by field engineers and regional installer partners. Across these four operating regions sits an estimated serviceable market of 1,971 sites (&pound;7.4 million annually).
       </p>
+      <div class="region-milestones">
+        <div class="region-pill">
+          <span class="region-key">Headquarters</span>
+          <strong>London, United Kingdom</strong>
+        </div>
+        <div class="region-pill">
+          <span class="region-key">First Cluster</span>
+          <strong>West Midlands &amp; South Wales</strong>
+        </div>
+        <div class="region-pill">
+          <span class="region-key">Year-3 Expansion</span>
+          <strong>North West &amp; East Midlands</strong>
+        </div>
+      </div>
       <p>
         Growing UK supply-chain security expectations—from prime contractor questionnaires, insurance renewals, the Cyber Security and Resilience Bill, the Cyber Governance Code of Practice and defence supplier requirements—make clear incident records essential for smaller sites.
       </p>
@@ -386,223 +537,263 @@
 </section>
 
 <!-- PRICING -->
-<section class="pricing-section" id="pricing">
-  <div class="pricing-container">
-    <div class="section-label">Licensing &amp; Pricing</div>
-    <h2 class="section-title">Per-Site Subscription Pricing.<br>Built for Small Industrial Teams.</h2>
-    <div class="section-divider"></div>
-    <p class="pricing-sub">
-      All subscription prices are per site, per month, excluding VAT. Essential is the initial subscription tier; Professional and Assured are planned to phase in from Month 13 (relative to start of operations).
-    </p>
-
-    <div class="pricing-grid">
-      <div class="price-card">
-        <div class="price-tag">Essential &middot; Initial Tier</div>
-        <h3>Essential</h3>
-        <p>For single sites with 10&ndash;50 staff.</p>
-        <span class="price-amount">&pound;199</span>
-        <div class="price-unit">per site, per month &middot; excl. VAT</div>
-        <ul class="price-features">
-          <li><span class="check">&#10003;</span> Covers cameras, doors, machines &amp; controllers, and the network</li>
-          <li><span class="check">&#10003;</span> Cross-domain suspicion chains &amp; plain-English narratives</li>
-          <li><span class="check">&#10003;</span> Weekly digest &amp; dated monthly evidence pack</li>
-          <li><span class="check">&#10003;</span> 90-day retention for presence, access &amp; machine metadata</li>
-          <li><span class="check">&#10003;</span> Unlimited users, alerts, packs &amp; software updates</li>
-        </ul>
-        <a href="#contact" class="price-btn price-btn-outline" data-tier="Essential (£199/site/month)">Enquire About Essential &rarr;</a>
-      </div>
-
-      <div class="price-card featured">
-        <div class="price-tag amber-tag">Planned from Month 13</div>
-        <h3>Professional</h3>
-        <p>For workshops and depots with larger connected-machine estates, or operators with two to three sites.</p>
-        <span class="price-amount">&pound;399</span>
-        <div class="price-unit">per site, per month &middot; excl. VAT (per site)</div>
-        <ul class="price-features">
-          <li><span class="check">&#10003;</span> Everything in Essential, plus:</li>
-          <li><span class="check">&#10003;</span> Statistical baselines</li>
-          <li><span class="check">&#10003;</span> 12-month source metadata retention</li>
-          <li><span class="check">&#10003;</span> Priority response</li>
-          <li><span class="check">&#10003;</span> Priced per site (planned from Month 13)</li>
-        </ul>
-        <a href="#contact" class="price-btn price-btn-blue" data-tier="Professional (£399/site/month — planned from Month 13)">Enquire About Professional &rarr;</a>
-      </div>
-
-      <div class="price-card">
-        <div class="price-tag amber-tag">Planned from Month 13</div>
-        <h3>Assured</h3>
-        <p>For suppliers facing procurement or insurer scrutiny.</p>
-        <span class="price-amount">&pound;599</span>
-        <div class="price-unit">per site, per month &middot; excl. VAT</div>
-        <ul class="price-features">
-          <li><span class="check">&#10003;</span> Everything in Professional, plus:</li>
-          <li><span class="check">&#10003;</span> Questionnaire-ready compliance reporting</li>
-          <li><span class="check">&#10003;</span> Quarterly review</li>
-          <li><span class="check">&#10003;</span> Named contact</li>
-          <li><span class="check">&#10003;</span> 12-month source metadata retention (planned from Month 13)</li>
-        </ul>
-        <a href="#contact" class="price-btn price-btn-outline" data-tier="Assured (£599/site/month — planned from Month 13)">Enquire About Assured &rarr;</a>
-      </div>
+<section class="section pricing-section" id="pricing">
+  <div class="container">
+    <div class="section-header-center reveal">
+      <div class="section-label section-label-light">Licensing &amp; Pricing</div>
+      <h2 class="section-title section-title-dark">Per-Site Subscription Pricing.<br>Built for Small Industrial Teams.</h2>
+      <p class="section-sub section-sub-dark">
+        All subscription prices are per site, per month, excluding VAT. Essential is the initial subscription tier; Professional and Assured are planned to phase in from Month 13 (relative to start of operations).
+      </p>
     </div>
 
-    <div class="billing-terms" aria-label="Billing and onboarding terms">
+    <div class="pricing-grid">
+      <article class="price-card initial-tier reveal" data-delay="0">
+        <div class="price-tag">Essential &middot; Initial Tier</div>
+        <h3>Essential</h3>
+        <p class="price-summary">For single sites with 10&ndash;50 staff.</p>
+        <div class="price-figure">
+          <span class="price-amount">&pound;199</span>
+          <span class="price-unit">per site / month &middot; excl. VAT</span>
+        </div>
+        <ul class="price-features">
+          <li><span class="check" aria-hidden="true">&#10003;</span> Covers cameras, doors, machines &amp; controllers, and the network</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> Cross-domain suspicion chains &amp; plain-English narratives</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> Weekly digest &amp; dated monthly evidence pack</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> 90-day retention for presence, access &amp; machine metadata</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> Unlimited users, alerts, packs &amp; software updates</li>
+        </ul>
+        <a href="#contact" class="price-btn price-btn-primary" data-tier="Essential (£199/site/month)">Enquire About Essential &rarr;</a>
+      </article>
+
+      <article class="price-card planned-tier reveal" data-delay="1">
+        <div class="price-tag amber-tag">Planned from Month 13</div>
+        <h3>Professional</h3>
+        <p class="price-summary">For workshops and depots with larger connected-machine estates, or operators with two to three sites.</p>
+        <div class="price-figure">
+          <span class="price-amount">&pound;399</span>
+          <span class="price-unit">per site / month &middot; excl. VAT (per site)</span>
+        </div>
+        <ul class="price-features">
+          <li><span class="check" aria-hidden="true">&#10003;</span> Everything in Essential, plus:</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> Statistical baselines</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> 12-month source metadata retention</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> Priority response</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> Priced per site (planned from Month 13)</li>
+        </ul>
+        <a href="#contact" class="price-btn price-btn-outline" data-tier="Professional (£399/site/month — planned from Month 13)">Enquire About Professional &rarr;</a>
+      </article>
+
+      <article class="price-card planned-tier reveal" data-delay="2">
+        <div class="price-tag amber-tag">Planned from Month 13</div>
+        <h3>Assured</h3>
+        <p class="price-summary">For suppliers facing procurement or insurer scrutiny.</p>
+        <div class="price-figure">
+          <span class="price-amount">&pound;599</span>
+          <span class="price-unit">per site / month &middot; excl. VAT</span>
+        </div>
+        <ul class="price-features">
+          <li><span class="check" aria-hidden="true">&#10003;</span> Everything in Professional, plus:</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> Questionnaire-ready compliance reporting</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> Quarterly review</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> Named contact</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span> 12-month source metadata retention (planned from Month 13)</li>
+        </ul>
+        <a href="#contact" class="price-btn price-btn-outline" data-tier="Assured (£599/site/month — planned from Month 13)">Enquire About Assured &rarr;</a>
+      </article>
+    </div>
+
+    <div class="billing-terms reveal" aria-label="Billing and onboarding terms">
       <h3>Billing &amp; Onboarding Terms</h3>
       <ul>
         <li>Monthly billing in advance by direct debit, on rolling monthly terms with no minimum term. All prices exclude VAT.</li>
         <li>A one-off <strong>&pound;595 onboarding and gateway fee</strong> applies to each new non-pilot site. It covers hardware, configuration, installation and baseline setup.</li>
         <li>The four pilot sites are exempt from the &pound;595 fee; their paid pilot subscription is <strong>&pound;199 per site per month</strong>.</li>
         <li>Users, alerts, the monthly evidence pack and software updates carry no separate charge.</li>
-        <li><strong>Professional</strong> (&pound;399/site/month) and <strong>Assured</strong> (&pound;599/site/month) are planned to phase in from Month 13; enquire below to register interest.</li>
+        <li><strong>Professional</strong> (&pound;399/site/month) and <strong>Assured</strong> (&pound;599/site/month) are planned to phase in from Month 13; use their enquiry buttons to register interest.</li>
       </ul>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="faq-section" id="faq">
-  <div class="faq-container">
-    <div class="faq-header">
+<section class="section faq-section" id="faq">
+  <div class="container faq-container">
+    <div class="section-header-center reveal">
       <div class="section-label">FAQ</div>
       <h2 class="section-title">Common Questions</h2>
-      <div class="section-divider"></div>
     </div>
 
-    <div class="faq-item">
-      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-1">
-        <span>What is the cyber-physical visibility gap CPSL closes?</span>
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-answer" id="faq-ans-1">
-        Small warehouses, depots, workshops and supplier factories usually buy cameras, door access, connected machines and routers separately from different suppliers. Each logs on its own clock with no link to the others. CPSL pulls metadata and logs onto one reference clock, links related events across domains into a single suspicion chain, states what was observed versus inferred if a source was missing, and produces a plain-English narrative with first actions.
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-1">
+          <span>What is the cyber-physical visibility gap CPSL closes?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq-ans-1">
+          <div class="faq-answer-inner">
+            Small warehouses, depots, workshops and supplier factories usually buy cameras, door access, connected machines and routers separately from different suppliers. Each logs on its own clock with no link to the others. CPSL pulls metadata and logs onto one reference clock, links related events across domains into a single suspicion chain, states what was observed versus inferred if a source was missing, and produces a plain-English narrative with first actions.
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-2">
-        <span>How does CPSL handle incomplete or legacy (&ldquo;brownfield&rdquo;) site data?</span>
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-answer" id="faq-ans-2">
-        Enterprise platforms assume clean, continuous telemetry and a security analyst to read dashboards. CPSL is built for small brownfield sites where a camera or log may drop offline. When a step is unrecorded, the reconstruction layer identifies the most probable sequence, explicitly labels the inferred step and reports reduced confidence. The initial build uses twenty deterministic cross-domain rules, followed later by statistical baselines (Months 8&ndash;18) and learned reconstruction models (Months 19&ndash;30).
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-2">
+          <span>How does CPSL handle incomplete or legacy (&ldquo;brownfield&rdquo;) site data?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq-ans-2">
+          <div class="faq-answer-inner">
+            Enterprise platforms assume clean, continuous telemetry and a security analyst to read dashboards. CPSL is built for small brownfield sites where a camera or log may drop offline. When a step is unrecorded, the reconstruction layer identifies the most probable sequence, explicitly labels the inferred step and reports reduced confidence. The initial build uses twenty deterministic cross-domain rules, followed later by statistical baselines (Months 8&ndash;18) and learned reconstruction models (Months 19&ndash;30).
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-3">
-        <span>Does CPSL work with our existing cameras, doors and network equipment?</span>
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-answer" id="faq-ans-3">
-        CPSL is designed to work with existing site equipment over standard interfaces so you do not have to replace hardware. Because older estates vary, a short remote site survey checks which of the four domains—cameras, door access, machines/controllers and network—are present and reachable before installation rather than promising compatibility with every brand upfront. The edge gateway sits beside existing systems, never in front of them, so site operations continue unchanged if the gateway goes offline.
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-3">
+          <span>Does CPSL work with our existing cameras, doors and network equipment?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq-ans-3">
+          <div class="faq-answer-inner">
+            CPSL is designed to work with existing site equipment over standard interfaces so you do not have to replace hardware. Because older estates vary, a short remote site survey checks which of the four domains—cameras, door access, machines/controllers and network—are present and reachable before installation rather than promising compatibility with every brand upfront. The edge gateway sits beside existing systems, never in front of them, so site operations continue unchanged if the gateway goes offline.
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-4">
-        <span>How does CPSL handle camera footage, privacy and data retention?</span>
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-answer" id="faq-ans-4">
-        Camera footage never leaves the site recorder. CPSL is designed to use metadata only—motion and object metadata, tokenised badge and asset identifiers (without employee names, photos or HR records), machine start/stop/fault/login events and network flow/syslog records (without packet payloads). The plan specifies UK-region cloud hosting, encryption in transit and at rest, tokenised site and asset identifiers, and role-based access. Source metadata (presence, access and machine metadata) is retained for 90 days on Essential and 12 months on Professional and Assured, whereas incident narratives, actions taken and monthly evidence packs are retained for 36 months. After a contract ends, customer data is scheduled to be returned or deleted within 90 days.
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-4">
+          <span>How does CPSL handle camera footage, privacy and data retention?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq-ans-4">
+          <div class="faq-answer-inner">
+            Camera footage never leaves the site recorder. CPSL is designed to use metadata only—motion and object metadata, tokenised badge and asset identifiers (without employee names, photos or HR records), machine start/stop/fault/login events and network flow/syslog records (without packet payloads). The plan specifies UK-region cloud hosting, encryption in transit and at rest, tokenised site and asset identifiers, and role-based access. Source metadata (presence, access and machine metadata) is retained for 90 days on Essential and 12 months on Professional and Assured, whereas incident narratives, actions taken and monthly evidence packs are retained for 36 months. After a contract ends, customer data is scheduled to be returned or deleted within 90 days.
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-5">
-        <span>What does the monthly evidence pack give a customer, insurer or auditor?</span>
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-answer" id="faq-ans-5">
-        Each month CPSL exports a dated record of incidents detected, plain-English narratives, physical and digital actions taken, and source coverage over the period. This gives a site manager, insurer, auditor or prime contractor clear, consistent operational records to support security questionnaires, insurance reviews and regulatory expectations—though it does not guarantee legal compliance, tender acceptance or formal certification on its own.
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-5">
+          <span>What does the monthly evidence pack give a customer, insurer or auditor?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq-ans-5">
+          <div class="faq-answer-inner">
+            Each month CPSL exports a dated record of incidents detected, plain-English narratives, physical and digital actions taken, and source coverage over the period. This gives a site manager, insurer, auditor or prime contractor clear, consistent operational records to support security questionnaires, insurance reviews and regulatory expectations—though it does not guarantee legal compliance, tender acceptance or formal certification on its own.
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-6">
-        <span>What is CPSL&rsquo;s current development status, patent plan and assurance roadmap?</span>
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-answer" id="faq-ans-6">
-        CPSL is currently at Technology Readiness Level 4 (TRL 4), with an 18-screen interactive prototype and four director-signed letters of intent at &pound;199 per site per month. A 12-week build leads into a paid four-site pilot in Months 4&ndash;6 and a Month 7 go/no-go gate against six pre-registered criteria to validate TRL 7. A UK patent application is scheduled for Month 5 (no patent is currently granted). Planned security assurance milestones are Cyber Essentials at Month 4, Cyber Essentials Plus at Month 14 and ISO 27001 certification targeted at Month 34 (all relative to start of operations and not yet held).
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-6">
+          <span>What is CPSL&rsquo;s current development status, patent plan and assurance roadmap?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq-ans-6">
+          <div class="faq-answer-inner">
+            CPSL is currently at Technology Readiness Level 4 (TRL 4), with an 18-screen interactive prototype and four director-signed letters of intent at &pound;199 per site per month. A 12-week build leads into a paid four-site pilot in Months 4&ndash;6 and a Month 7 go/no-go gate against six pre-registered criteria to validate TRL 7. A UK patent application is scheduled for Month 5 (no patent is currently granted). Planned security assurance milestones are Cyber Essentials at Month 4, Cyber Essentials Plus at Month 14 and ISO 27001 certification targeted at Month 34 (all relative to start of operations and not yet held).
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="contact-container">
-    <div class="contact-left">
+<section class="section contact-section" id="contact">
+  <div class="container contact-container">
+    <div class="contact-left reveal">
       <div class="section-label">Get In Touch</div>
-      <h2 class="section-title">Request a Demo or<br>Discuss a Site Survey</h2>
+      <h2 class="section-title">Request a Demo or Discuss a Site Survey</h2>
       <div class="section-divider"></div>
       <p>
         Whether you operate a small warehouse, depot, multi-bay vehicle workshop, supplier factory in a regulated supply chain, insurer, or installer / managed-service partner—contact us to arrange a demonstration against your site&rsquo;s source list or enquire about upcoming availability.
       </p>
-      <div class="contact-info-item">
-        <div class="contact-icon" aria-hidden="true">&#9993;</div>
-        <div class="contact-info-text">
-          <strong>Email</strong>
-          <span><a href="mailto:cyberphysicallayeruk@outlook.com" class="contact-email-link">cyberphysicallayeruk@outlook.com</a></span>
+
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="2.5" y="4.5" width="15" height="11" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="m3 5.5 7 5 7-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <strong>Email</strong>
+            <span><a href="mailto:cyberphysicallayeruk@outlook.com" class="contact-email-link">cyberphysicallayeruk@outlook.com</a></span>
+          </div>
         </div>
-      </div>
-      <div class="contact-info-item">
-        <div class="contact-icon" aria-hidden="true">&#9873;</div>
-        <div class="contact-info-text">
-          <strong>Headquarters</strong>
-          <span>London, United Kingdom</span>
+
+        <div class="contact-info-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 17s5.5-4.3 5.5-8.5a5.5 5.5 0 1 0-11 0C4.5 12.7 10 17 10 17Z" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="8.5" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <strong>Headquarters</strong>
+            <span>London, United Kingdom</span>
+          </div>
         </div>
-      </div>
-      <div class="contact-info-item">
-        <div class="contact-icon" aria-hidden="true">&#9672;</div>
-        <div class="contact-info-text">
-          <strong>Target Sectors</strong>
-          <span>Small Warehouses &middot; Depots &middot; Multi-Bay Workshops &middot; Supplier Factories (10&ndash;249 Staff) &middot; Regulated &amp; Defence Supply Chains</span>
+
+        <div class="contact-info-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M3 16.5V7l7-3.5L17 7v9.5M7 16.5v-4h6v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <strong>Target Sectors</strong>
+            <span>Small Warehouses &middot; Depots &middot; Multi-Bay Workshops &middot; Supplier Factories (10&ndash;249 Staff) &middot; Regulated &amp; Defence Supply Chains</span>
+          </div>
         </div>
-      </div>
-      <div class="contact-info-item">
-        <div class="contact-icon" aria-hidden="true">&#9678;</div>
-        <div class="contact-info-text">
-          <strong>Pilot &amp; Rollout Regions</strong>
-          <span>West Midlands &amp; South Wales (First Cluster) &middot; Year-3 Expansion: North West &amp; East Midlands</span>
+
+        <div class="contact-info-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 3.5v13M3.5 10h13" stroke="currentColor" stroke-width="1.3"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <strong>Pilot &amp; Rollout Regions</strong>
+            <span>West Midlands &amp; South Wales (First Cluster) &middot; Year-3 Expansion: North West &amp; East Midlands</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <form class="contact-form" id="contactForm" method="POST" action="https://api.web3forms.com/submit" novalidate>
+    <form class="contact-form reveal" data-delay="1" id="contactForm" method="POST" action="https://api.web3forms.com/submit" novalidate>
       <input type="hidden" name="access_key" value="d1d79d75-e754-418e-862e-a0643a4f2ae9">
       <input type="hidden" name="subject" value="CPSL Website Enquiry">
       <input type="hidden" name="from_name" value="Cyber-Physical Security Layer Ltd Website">
 
-      <div class="form-group">
-        <label for="contact-name">Full Name</label>
-        <input id="contact-name" type="text" name="name" placeholder="Your full name" required>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label for="contact-name">Full Name</label>
+          <input id="contact-name" type="text" name="name" placeholder="Your full name" autocomplete="name" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email Address</label>
+          <input id="contact-email" type="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="contact-email">Email Address</label>
-        <input id="contact-email" type="email" name="email" placeholder="your@email.com" required>
+
+      <div class="form-row-2">
+        <div class="form-group">
+          <label for="contact-org">Organisation</label>
+          <input id="contact-org" type="text" name="organisation" placeholder="Site or company name" autocomplete="organization">
+        </div>
+        <div class="form-group">
+          <label for="contact-role">I am a&hellip;</label>
+          <select id="contact-role" name="role">
+            <option value="">Select your role</option>
+            <option>Warehouse / Logistics Manager</option>
+            <option>Vehicle Workshop Owner</option>
+            <option>Operations / Security Director</option>
+            <option>IT / Cyber Security Lead</option>
+            <option>Regulated Supply Chain / Procurement Lead</option>
+            <option>Defence / Government Supplier</option>
+            <option>Manufacturing SME Owner</option>
+            <option>Insurer / Broker</option>
+            <option>Installer / Managed Service Partner</option>
+            <option>Investor / Funder</option>
+            <option>Other</option>
+          </select>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="contact-org">Organisation</label>
-        <input id="contact-org" type="text" name="organisation" placeholder="Warehouse, depot, workshop, or company name">
-      </div>
-      <div class="form-group">
-        <label for="contact-role">I am a&hellip;</label>
-        <select id="contact-role" name="role">
-          <option value="">Select your role</option>
-          <option>Warehouse / Logistics Manager</option>
-          <option>Vehicle Workshop Owner</option>
-          <option>Operations / Security Director</option>
-          <option>IT / Cyber Security Lead</option>
-          <option>Regulated Supply Chain / Procurement Lead</option>
-          <option>Defence / Government Supplier</option>
-          <option>Manufacturing SME Owner</option>
-          <option>Insurer / Broker</option>
-          <option>Installer / Managed Service Partner</option>
-          <option>Investor / Funder</option>
-          <option>Other</option>
-        </select>
-      </div>
+
       <div class="form-group">
         <label for="contact-message">Message</label>
         <textarea id="contact-message" name="message" placeholder="Tell us about your site systems, security questions, or interest in a demonstration..." required></textarea>
@@ -611,8 +802,10 @@
       <div id="formStatus" class="form-status" role="status" aria-live="polite" hidden></div>
 
       <div class="form-actions">
-        <button class="form-submit" id="formSubmitBtn" type="submit">Send Enquiry &rarr;</button>
-        <a class="form-draft-btn" id="openEmailDraftBtn" href="mailto:cyberphysicallayeruk@outlook.com?subject=CPSL%20Website%20Enquiry">Open email draft</a>
+        <button class="btn btn-primary form-submit" id="formSubmitBtn" type="submit">
+          <span class="btn-label">Send Enquiry &rarr;</span>
+        </button>
+        <a class="btn btn-secondary form-draft-btn" id="openEmailDraftBtn" href="mailto:cyberphysicallayeruk@outlook.com?subject=CPSL%20Website%20Enquiry">Open email draft</a>
       </div>
       <p class="form-helper-note">
         Prefer your own email app? Select <strong>Open email draft</strong> to compose directly to cyberphysicallayeruk@outlook.com.
@@ -621,40 +814,43 @@
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="logo-wrap">
-        <span class="logo-text">
-          CyberPhysical<span>Layer</span>
-        </span>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span class="logo-text">CyberPhysical<span>Layer</span></span>
+        </div>
+        <p>
+          Cyber-Physical Security Layer Ltd (CPSL) is developing an edge gateway for small UK warehouses, depots, multi-bay workshops and supplier factories (10&ndash;249 staff), linking cameras, doors, machines and the site network into one timeline, plain-English account and monthly evidence pack.
+        </p>
       </div>
-      <p>
-        Cyber-Physical Security Layer Ltd (CPSL) is developing an edge gateway for small UK warehouses, depots, multi-bay workshops and supplier factories (10&ndash;249 staff), linking cameras, doors, machines and the site network into one timeline, plain-English account and monthly evidence pack.
-      </p>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#platform">Technology</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact">Request Demo</a>
+        <a href="#contact">Partnerships</a>
+      </div>
     </div>
 
-    <div class="footer-col">
-      <h4>Platform</h4>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#platform">Technology</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
+    <div class="footer-bottom">
+      <p>&copy; 2026 <span>Cyber-Physical Security Layer Ltd (CPSL)</span>. All rights reserved. Headquartered in London, United Kingdom.</p>
+      <p>Founders: <span>Muhammad Ashhar</span> (CEO) &amp; <span>Muhammad Asil Shahzad</span> (CTO) &mdash; MSc Cyber Security and Forensics, University of Westminster</p>
     </div>
-
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact">Request Demo</a>
-      <a href="#contact">Partnerships</a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2026 <span>Cyber-Physical Security Layer Ltd (CPSL)</span>. All rights reserved. Headquartered in London, United Kingdom.</p>
-    <p>Founders: <span>Muhammad Ashhar</span> (CEO) &amp; <span>Muhammad Asil Shahzad</span> (CTO) &mdash; MSc Cyber Security and Forensics, University of Westminster</p>
   </div>
 </footer>
 

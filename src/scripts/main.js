@@ -1,5 +1,15 @@
 const PUBLIC_CONTACT_EMAIL = 'cyberphysicallayeruk@outlook.com';
 
+// Navbar scroll elevation
+const navbar = document.getElementById('navbar');
+if (navbar) {
+  const onScroll = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 16);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
+
 // Mobile navigation menu
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
@@ -19,6 +29,16 @@ if (menuToggle && navMenu) {
     link.addEventListener('click', closeMenu);
   });
 
+  document.addEventListener('click', (e) => {
+    if (
+      navMenu.classList.contains('active') &&
+      !navMenu.contains(e.target) &&
+      !menuToggle.contains(e.target)
+    ) {
+      closeMenu();
+    }
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navMenu.classList.contains('active')) {
       closeMenu();
@@ -27,7 +47,7 @@ if (menuToggle && navMenu) {
   });
 }
 
-// Smooth scroll for internal anchor links & pricing tier enquiry pre-fill
+// Smooth scroll & pricing tier pre-fill
 const messageField = document.getElementById('contact-message');
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -45,6 +65,87 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       messageField.value = `Enquiry regarding ${tier}.\n\nSite location & systems: `;
       updateDraftHref();
     }
+  });
+});
+
+// Interactive 5-stage pipeline viewer (all 5 stage descriptions remain visible at all times)
+const stages = [
+  {
+    badge: 'STAGE 01 · COLLECTION',
+    title: '1 — Collection',
+    desc: 'Reads standard interfaces from existing cameras, doors, connected machines and network equipment without sending video off site.',
+    img: '/images/cyber1.png',
+    alt: 'Stage 1: Collection across camera metadata, door access, machine logs and network records',
+  },
+  {
+    badge: 'STAGE 02 · NORMALISATION',
+    title: '2 — Normalisation',
+    desc: 'Puts events from separate suppliers into one schema, corrects clock drift to one reference clock, and labels place, actor and domain.',
+    img: '/images/stage2-normalisation.png',
+    alt: 'Stage 2: Normalisation to one format and reference clock',
+  },
+  {
+    badge: 'STAGE 03 · SUSPICION CHAINS',
+    title: '3 — Suspicion chains',
+    desc: 'Links related events by time, place and order across physical and digital systems so one sequence can be assessed as one incident.',
+    img: '/images/stage3-suspicion-chains.png',
+    alt: 'Stage 3: Suspicion chains linking events by time, place and order',
+  },
+  {
+    badge: 'STAGE 04 · RECONSTRUCTION',
+    title: '4 — Reconstruction',
+    desc: 'Identifies the most probable sequence when evidence is missing, explicitly labels the inferred step, and states reduced confidence.',
+    img: '/images/stage4-reconstruction.png',
+    alt: 'Stage 4: Reconstruction of missing steps with stated confidence',
+  },
+  {
+    badge: 'STAGE 05 · NARRATIVE & GUIDANCE',
+    title: '5 — Narrative & guidance',
+    desc: 'Delivers a plain-English operational account, names contributing and missing sources, and sets out the first physical and digital actions.',
+    img: '/images/cyber3.png',
+    alt: 'Stage 5: Plain-English narrative and mixed-incident response guidance',
+  },
+];
+
+const stageSteps = Array.from(document.querySelectorAll('.pipeline-step[data-stage]'));
+const viewerDots = Array.from(document.querySelectorAll('.viewer-dot[data-stage]'));
+const viewerBadge = document.getElementById('viewerBadge');
+const viewerImg = document.getElementById('viewerImg');
+const viewerTitle = document.getElementById('viewerTitle');
+const viewerDesc = document.getElementById('viewerDesc');
+
+function selectStage(index) {
+  const data = stages[index];
+  if (!data) return;
+
+  stageSteps.forEach((btn, idx) => {
+    const active = idx === index;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', String(active));
+  });
+
+  viewerDots.forEach((dot, idx) => {
+    dot.classList.toggle('active', idx === index);
+  });
+
+  if (viewerBadge) viewerBadge.textContent = data.badge;
+  if (viewerTitle) viewerTitle.textContent = data.title;
+  if (viewerDesc) viewerDesc.textContent = data.desc;
+
+  if (viewerImg && viewerImg.getAttribute('src') !== data.img) {
+    viewerImg.classList.add('switching');
+    window.setTimeout(() => {
+      viewerImg.setAttribute('src', data.img);
+      viewerImg.setAttribute('alt', data.alt);
+      viewerImg.classList.remove('switching');
+    }, 110);
+  }
+}
+
+[...stageSteps, ...viewerDots].forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const idx = Number(trigger.getAttribute('data-stage'));
+    if (!Number.isNaN(idx)) selectStage(idx);
   });
 });
 
@@ -194,8 +295,58 @@ if (contactForm) {
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Send Enquiry &rarr;';
+        submitBtn.innerHTML = '<span class="btn-label">Send Enquiry &rarr;</span>';
       }
     }
   });
+}
+
+// Purposeful one-time scroll reveals (respects prefers-reduced-motion; safe if JS fails)
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const revealItems = Array.from(document.querySelectorAll('.reveal'));
+
+if (!prefersReducedMotion && 'IntersectionObserver' in window && revealItems.length > 0) {
+  document.documentElement.classList.add('has-motion');
+
+  const revealVisibleAndPassed = () => {
+    const thresholdY = window.innerHeight * 0.96;
+    revealItems.forEach((el) => {
+      if (el.classList.contains('is-visible')) return;
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= thresholdY) {
+        el.classList.add('is-visible');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting || entry.boundingClientRect.top <= window.innerHeight) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.01, rootMargin: '0px 0px 40px 0px' }
+  );
+
+  revealItems.forEach((el) => observer.observe(el));
+  revealVisibleAndPassed();
+
+  let rafPending = false;
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (rafPending) return;
+      rafPending = true;
+      window.requestAnimationFrame(() => {
+        revealVisibleAndPassed();
+        rafPending = false;
+      });
+    },
+    { passive: true }
+  );
+} else {
+  revealItems.forEach((el) => el.classList.add('is-visible'));
 }
